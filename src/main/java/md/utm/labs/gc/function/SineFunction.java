@@ -22,6 +22,6 @@ public class SineFunction extends Function {
 	}
 	
 	public String toString() {
-		return "1.3 sin(" + getFunctionCoefficient() + "x)";
+		return "1.3 sin(" + Math.round(getFunctionCoefficient()) + "x)";
 	}
 }

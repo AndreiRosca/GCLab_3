@@ -22,6 +22,6 @@ public class CosineFunction extends Function {
 	}
 	
 	public String toString() {
-		return "4 cos(" + getFunctionCoefficient() + "x)";
+		return "4 cos(" + Math.round(getFunctionCoefficient()) + "x)";
 	}
 }

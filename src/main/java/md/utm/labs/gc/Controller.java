@@ -11,13 +11,20 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TitledPane;
 import javafx.scene.layout.AnchorPane;
+import md.utm.labs.gc.draw.FunctionPlotter;
 import md.utm.labs.gc.draw.FunctionPlotterFactory;
 
 public class Controller implements Initializable {
 
 	@FXML
 	private TitledPane firstFunctionPane;
-	
+
+	@FXML
+	private TitledPane secondFunctionPane;
+
+	@FXML
+	private TitledPane thirdFunctionPane;
+
 	@FXML
 	private AnchorPane firstFunctionAnchorPane;
 
@@ -48,8 +55,14 @@ public class Controller implements Initializable {
 	}
 
 	private void graphFunctions(double coefficient) {
-		new GraphFunctionRequest(FunctionPlotterFactory.getSinePlotter(coefficient)).graph(firstFunctionAnchorPane);
-		new GraphFunctionRequest(FunctionPlotterFactory.getCosinePlotter(coefficient)).graph(secondFunctionAnchorPane);
+		FunctionPlotter plotter = FunctionPlotterFactory.getSinePlotter(coefficient);
+		new GraphFunctionRequest(plotter).graph(firstFunctionAnchorPane);
+		new UpdateFunctionLabelRequest(plotter).updateLabel(firstFunctionPane);
+
+		plotter = FunctionPlotterFactory.getCosinePlotter(coefficient);
+		new GraphFunctionRequest(plotter).graph(secondFunctionAnchorPane);
+		new UpdateFunctionLabelRequest(plotter).updateLabel(secondFunctionPane);
+
 		new GraphFunctionRequest(FunctionPlotterFactory.getCubePlotter()).graph(thirdFunctionAnchorPane);
 	}
 
