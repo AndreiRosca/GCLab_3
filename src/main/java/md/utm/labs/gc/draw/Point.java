@@ -1,7 +1,7 @@
-package md.utm.labs.gc;
+package md.utm.labs.gc.draw;
 
 public class Point {
-
+	private static final double EQUALITY_PRECISION = 0.1;
 	private double x;
 	private double y;
 
@@ -43,9 +43,9 @@ public class Point {
 		if (getClass() != obj.getClass())
 			return false;
 		Point other = (Point) obj;
-		if (Double.doubleToLongBits(x) != Double.doubleToLongBits(other.x))
+		if (Math.abs(x - other.x) > EQUALITY_PRECISION)
 			return false;
-		if (Double.doubleToLongBits(y) != Double.doubleToLongBits(other.y))
+		if (Math.abs(y - other.y) > EQUALITY_PRECISION)
 			return false;
 		return true;
 	}

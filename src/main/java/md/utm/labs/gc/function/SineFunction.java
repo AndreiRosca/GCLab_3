@@ -9,9 +9,19 @@ public class SineFunction extends Function {
 	public static Function newInstance() {
 		return new SineFunction();
 	}
+	
+	public static Function newInstance(double functionCoefficient) {
+		Function function = new SineFunction();
+		function.setFunctionCoefficient(functionCoefficient);
+		return function;
+	}
 
 	@Override
 	public double evaluate(double x) {
-		return 1.3 * Math.sin(2.0 * x);
+		return 1.3 * Math.sin(getFunctionCoefficient() * x);
+	}
+	
+	public String toString() {
+		return "1.3 sin(" + getFunctionCoefficient() + "x)";
 	}
 }

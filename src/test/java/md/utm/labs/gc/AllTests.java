@@ -11,6 +11,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 import md.utm.labs.gc.algorithm.BresenhamLineAlgorithmTest;
 import md.utm.labs.gc.draw.FunctionPlotterTest;
+import md.utm.labs.gc.draw.Point;
 import md.utm.labs.gc.function.CosineFunctionTest;
 import md.utm.labs.gc.function.CubeFunctionTest;
 import md.utm.labs.gc.function.FunctionTest;

@@ -9,7 +9,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-import md.utm.labs.gc.Point;
+import md.utm.labs.gc.draw.Point;
 
 public class FunctionTest {
 

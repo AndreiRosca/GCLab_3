@@ -3,7 +3,6 @@ package md.utm.labs.gc.draw;
 import java.util.ArrayList;
 import java.util.List;
 
-import md.utm.labs.gc.Point;
 import md.utm.labs.gc.algorithm.LineDrawingAlgorithm;
 import md.utm.labs.gc.function.Function;
 import md.utm.labs.gc.function.Interval;
@@ -20,7 +19,7 @@ public class FunctionPlotter {
 		this.interval = interval;
 	}
 
-	static FunctionPlotter newInstance(LineDrawingAlgorithm bresenhamLineAlgorithm, Function function,
+	public static FunctionPlotter newInstance(LineDrawingAlgorithm bresenhamLineAlgorithm, Function function,
 			Interval interval) {
 		return new FunctionPlotter(bresenhamLineAlgorithm, function, interval);
 	}
@@ -59,5 +58,9 @@ public class FunctionPlotter {
 		public FunctionPlotter build() {
 			return FunctionPlotter.newInstance(lineAlgorithm, function, interval);
 		}
+	}
+	
+	public Function getFunction() {
+		return function;
 	}
 }

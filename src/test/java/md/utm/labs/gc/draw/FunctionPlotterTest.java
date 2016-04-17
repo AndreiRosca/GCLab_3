@@ -9,7 +9,6 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-import md.utm.labs.gc.Point;
 import md.utm.labs.gc.algorithm.BresenhamLineAlgorithm;
 import md.utm.labs.gc.function.CubeFunction;
 import md.utm.labs.gc.function.Function;

@@ -3,7 +3,7 @@ package md.utm.labs.gc.algorithm;
 import java.util.ArrayList;
 import java.util.List;
 
-import md.utm.labs.gc.Point;
+import md.utm.labs.gc.draw.Point;
 
 public class BresenhamLineAlgorithm implements LineDrawingAlgorithm {
 
